@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: abhisheaaks 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: abhisheaaks 
+    spec:
+      containers:
+        - name: abhisheaaks 
+          image: abhisheaacr.azurecr.io/abhisheaaks 
+          ports:
+          - containerPort: 8081
